@@ -14,7 +14,7 @@ class Img extends React.Component {
     } = await axios.get(
       "https://raw.githubusercontent.com/jjinvely/react-site2-3__/main/src/assets/json/Img.json"
     );
-    //console.log(data.Story);
+
     this.setState({ImgInfo})
 
   }

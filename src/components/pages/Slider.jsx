@@ -5,7 +5,7 @@ import axios from "axios";
 
 class Slider extends React.Component {
   state = {
-    sliderInfo:[],
+    sliderInfo:[0],
   };
 
   getSliderInfo = async () => {

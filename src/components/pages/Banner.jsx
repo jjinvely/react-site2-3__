@@ -2,26 +2,36 @@ import React from 'react';
 import BannerCont from '../includes/BannerCont';
 import axios from "axios";
 
-
 class Banner extends React.Component {
   state = {
-    ImgInfo: []
+    bannerInfo: []
     
   };
 
+  getNews = async () => {
+    const {
+        data:{bannerInfo},
+    } = await axios.get(
+      "https://raw.githubusercontent.com/jjinvely/react-site2-3__/main/src/assets/json/Banner.json"
+    );
+
+    this.setState({bannerInfo})
+
+  }
+
+  componentDidMount() {
+    this.getNews()
+  }
 
 
+  render() {
+    const {bannerInfo} = this.state;
 
-
-function Banner() {
-  return (
-    <>
-
-      <BannerCont/>
-
-
-    </>
-  );
+    return (
+      <BannerCont bannerInfo={bannerInfo}/>
+    )
+  }
 }
+
 
 export default Banner;

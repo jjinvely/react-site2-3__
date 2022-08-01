@@ -3,22 +3,37 @@ import CardCont from '../includes/CardCont'
 import axios from "axios";
 
 
-class Img extends React.Component{
-  state ={
-    CardInfo :[]
+class Card extends React.Component {
+  state = {
+    CardInfo: []
+    
+  };
+
+  getNews = async () => {
+    const {
+        data:{data:{CardInfo}},
+    } = await axios.get(
+      "https://raw.githubusercontent.com/jjinvely/react-site2-3__/main/src/assets/json/Card.json"
+    );
+
+    this.setState({CardInfo})
+
   }
 
+  componentDidMount() {
+    this.getNews()
+  }
+
+
+  render() {
+    const {CardInfo} = this.state;
+
+    return (
+      <CardCont CardInfo={CardInfo}/>
+    )
   }
 }
 
 
-function Card() {
-  return (
-    <>       
-          <CardCont/>
-
-    </>
-  );
-}
 
 export default Card;
