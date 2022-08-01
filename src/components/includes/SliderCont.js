@@ -1,7 +1,7 @@
 import React from 'react'
 
 // const sliderInfo = [
-//   {title:'BLACK TOP',
+//   {text:'BLACK TOP',
 // desc:'커피의 나라를 기록하는 블랙탑<br />세계 각지에서 체험한 다양한 기록으로<br />한 차원 높은 수준의 교육을 만듭니다.',
 // more:'더알아보기',
 // btn:{
@@ -22,7 +22,7 @@ function SliderCont({sliderInfo}) {
           <div className="slider">
             <div className="slider__img">
               <div className="desc">
-                <h3>{sliderInfo[0].title}</h3>
+                <h3>{sliderInfo[0].text}</h3>
                 <p>
                  {sliderInfo[0].desc}
                 </p>
