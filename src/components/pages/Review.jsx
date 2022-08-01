@@ -1,16 +1,14 @@
 import React from 'react';
-import Contents from '../layout/Contents';
-import Footer from '../layout/Footer';
 import ReviewCont from '../includes/ReviewCont';
+import axios from "axios";
 
 
 function Review() {
   return (
     <>
-    <Contents>    
+
        <ReviewCont/>
-    </Contents>
-    <Footer/>
+
     </>
   );
 }

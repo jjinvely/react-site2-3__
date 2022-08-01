@@ -1,13 +1,24 @@
 import React from 'react';
-import Contents from '../layout/Contents';
 import BannerCont from '../includes/BannerCont';
+import axios from "axios";
+
+
+class Banner extends React.Component {
+  state = {
+    ImgInfo: []
+    
+  };
+
+
+
+
 
 function Banner() {
   return (
     <>
-    <Contents>
+
       <BannerCont/>
-     </Contents>
+
 
     </>
   );

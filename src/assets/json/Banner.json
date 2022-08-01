@@ -1,9 +1,5 @@
 
-{"status": "ok",
-"status_message": "Query was successful", 
-"data":{
-  "count":1,
-  "number":1,  
+{
 "bannerInfo" : [
   {
     "title": "BLACK TOP",
@@ -11,5 +7,4 @@
     "btn":"바로가기"
   }
 ]
-}
 }

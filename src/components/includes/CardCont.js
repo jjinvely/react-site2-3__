@@ -2,14 +2,14 @@ import React from 'react'
 
 
 
-const CardInfo = [{
-    id:1,
-    img:'img/tutor01.jpg'},
-  {title:'원장 Sam',
-  btn:'더 자세히보기'},
-  {id:2,img:'img/tutor02.jpg'},{title:'부원장 Sella', btn:'더 자세히보기'},
-  {id:3, img:'img/tutor03.jpg'},{title:'강사 James', btn:'더 자세히보기'}
-]
+// const CardInfo = [{
+//     id:1,
+//     img:'img/tutor01.jpg'},
+//   {title:'원장 Sam',
+//   btn:'더 자세히보기'},
+//   {id:2,img:'img/tutor02.jpg'},{title:'부원장 Sella', btn:'더 자세히보기'},
+//   {id:3, img:'img/tutor03.jpg'},{title:'강사 James', btn:'더 자세히보기'}
+// ]
 
 
 function CardCont({id,img,title,btn}) {

@@ -1,15 +1,35 @@
 import React from 'react';
-import Contents from '../layout/Contents';
 import ImgCont from '../includes/ImgCont';
+import axios from "axios";
 
-function Img() {
-  return (
-    <>
-        <Contents>
-          <ImgCont/>
-        </Contents>
-    </>
-  );
+class Img extends React.Component {
+  state = {
+    ImgInfo: []
+    
+  };
+
+  getNews = async () => {
+    const {
+        data:{ImgInfo},
+    } = await axios.get(
+      "https://raw.githubusercontent.com/jjinvely/react-site2-3__/main/src/assets/json/Img.json"
+    );
+    //console.log(data.Story);
+    this.setState({ImgInfo})
+
+  }
+
+  componentDidMount() {
+    this.getNews()
+  }
+
+  render() {
+    const {ImgInfo} = this.state;
+
+    return (
+      <ImgCont ImgInfo={ImgInfo}/>
+    )
+  }
 }
 
-export default Img;
+export default Img
